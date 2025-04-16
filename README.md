@@ -1,12 +1,13 @@
-# Garbage Classification Model
+### Multimodal Garbage Classification with Image and Text
 
-## Assignment Overview
-This repository contains the jupyter notebook code for the Garbage Classification Model developed as part of Assignment 02. The objective of this assignment is to build a classification model using PyTorch to classify different types of garbage based on both image and textual information.
+This project implements a multimodal deep learning classifier that combines visual and textual data to classify garbage into four categories. The model integrates **MobileNetV2** for image feature extraction and **DistilBERT** for text embeddings extracted from image filenames, which often provide contextual information about the garbage type.
 
-**Jupyter Notebook**: Contains the model training process, evaluation metrics, and visualizations of the classifications.
+Key components include:
+- **Multimodal Fusion**: Combines image and text features using a custom PyTorch neural network.
+- **Preprocessing**: Uses `torchvision` for image normalization and `transformers` for text tokenization.
+- **Custom Dataset**: Loads image, text, and label with tokenization and transformations.
+- **Training Pipeline**: Includes training, validation, and testing phases with performance tracking.
+- **Performance**: Achieves ~90.6% validation accuracy and ~85.9% test accuracy after 5 epochs.
+- **Evaluation**: Final predictions are analyzed with a confusion matrix for class-wise insights.
 
-## Group Members
-- Ragib Sina
-- Lucien Somorai
-- Suchet Mangat
-- Heemin Kang
+🔧 **Tech Stack**: PyTorch, torchvision, Hugging Face Transformers, MobileNetV2, DistilBERT, matplotlib, seaborn.
